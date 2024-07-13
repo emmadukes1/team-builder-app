@@ -32,7 +32,7 @@ public class PlayerServiceImpl implements PlayerService {
   }
 
   @Override
-  public List<PlayerDTO> getTeamList() {
+  public List<PlayerDTO> getAllPlayersList() {
 
     List<PlayerEntity> listOfPlayers = (List<PlayerEntity>)playerRepository.findAll();
     List<PlayerDTO> playerList = new ArrayList<>();

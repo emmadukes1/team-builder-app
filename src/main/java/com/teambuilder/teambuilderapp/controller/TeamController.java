@@ -12,27 +12,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.teambuilder.teambuilderapp.dto.PlayerDTO;
-import com.teambuilder.teambuilderapp.service.PlayerService;
+import com.teambuilder.teambuilderapp.dto.TeamDTO;
+import com.teambuilder.teambuilderapp.service.TeamService;
 
 @RestController
-@RequestMapping("/api/v1/player")
-public class playerController {
+@RequestMapping("/api/v1/team")
+public class TeamController {
 
   @Autowired
-  private PlayerService playerService;
+  TeamService teamService;
 
-  @PostMapping("/register-player")
-  public ResponseEntity<PlayerDTO> registerPlayer(@RequestBody PlayerDTO playerDTO) {
+  @PostMapping("/register-team")
+  public ResponseEntity<TeamDTO> registerTeam(@RequestBody TeamDTO teamDTO) {
 
-    return new ResponseEntity<>(playerService.registerPlayer(playerDTO), HttpStatus.CREATED);
+    return new ResponseEntity<>(teamService.registerTeam(teamDTO), HttpStatus.CREATED);
   }
-
-  @GetMapping("/get-all-players")
-  public ResponseEntity<List<PlayerDTO>> getPlayerList() {
-
-    return new ResponseEntity<>(playerService.getAllPlayersList(), HttpStatus.OK);
-  }
-
-
 
 }
