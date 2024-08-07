@@ -13,7 +13,7 @@ public class TeamConverter {
     TeamEntity teamEntity= new TeamEntity();
     teamEntity.setTeamName(teamDTO.getTeamName());
     teamEntity.setHeadCoach(teamDTO.getHeadCoach());
-    teamEntity.setNumberOfPlayers(teamDTO.getNumberOfPlayers());
+    teamEntity.setNumberOnPitchPlayers(teamDTO.getNumberOnPitchPlayers());
     teamEntity.setNumberOfSubstitutes(teamDTO.getNumberOfSubstitutes());
     teamEntity.setOffsideRulesApply(teamDTO.getOffsideRulesApply());
     teamEntity.setLeague(teamDTO.getLeague());

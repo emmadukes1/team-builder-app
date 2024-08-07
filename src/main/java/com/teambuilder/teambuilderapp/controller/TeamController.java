@@ -27,5 +27,4 @@ public class TeamController {
 
     return new ResponseEntity<>(teamService.registerTeam(teamDTO), HttpStatus.CREATED);
   }
-
 }
